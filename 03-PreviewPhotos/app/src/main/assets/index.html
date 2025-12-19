@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Android WebView App</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Gradient -->
+  <div class="background-cover-gradient"></div>
+
+  <!-- Top App Bar -->
+  <header class="top-bar">
+    <button class="menu-button" onclick="openSidebar()">☰</button>
+    <span class="app-title">Example App</span>
+    <button class="close-button" onclick="closeSidebar()">✕</button>
+  </header>
+
+  <!-- Sidebar / Drawer -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><button onclick="showDialog()">About</button></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content" onclick="closeSidebarIfOutside(event)">
+    <h1>Welcome</h1>
+
+    <div class="info-card">
+      <h2>Screenshots Disabled</h2>
+      <p>This application does not allow screenshots or screen recording.</p>
+      <code>
+        WindowManager.LayoutParams.FLAG_SECURE
+      </code>
+    </div>
+
+    <p class="note">
+      This security feature is enabled to protect app content.
+    </p>
+  </main>
+
+  <!-- About Dialog -->
+  <dialog id="htmlDialog">
+    <h3>About This App</h3>
+    <p>
+      This app is built using HTML, CSS, JavaScript, and Android WebView.
+      It works completely offline.
+    </p>
+    <button onclick="closeDialog()">Close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
