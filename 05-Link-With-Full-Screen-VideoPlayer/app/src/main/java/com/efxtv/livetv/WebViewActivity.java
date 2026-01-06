@@ -15,7 +15,7 @@ public class WebViewActivity extends Activity {
     private View customView;
     private WebChromeClient.CustomViewCallback customViewCallback;
 
-    private static final String START_URL = "https://famelack.com/";
+    private static final String START_URL = "https://youtube.com/";  // add your link here 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
